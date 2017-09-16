@@ -3,7 +3,7 @@
   "description": "Check quizlet or something to highlight requested words",
   "version": "1.0",
   "permissions": [
-    "activeTab"
+    "tabs", "http://*/*", "https://*/*"
   ],
   "browser_action": {
     // "default_icon": "icon.png",
