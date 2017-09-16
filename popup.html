@@ -3,7 +3,7 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700,700italic,300italic,300" rel="stylesheet" type="text/css" />
-    <script src="popup.js"></script>
+    <script src="hilitor.js"></script>
     <script type="text/javascript" src="popup.js"></script>
   </head>
   <body>
@@ -15,7 +15,17 @@
         <button id="btn_search">Search</button>
       </div>
 
+      <script type="text/javascript">
+      	document.addEventListener('DOMContentLoaded', function() {
+    		myHilitor = new Hilitor("content");
+    		myHilitor.apply("a the");
+    		//js crap
+		});
+      </script>
       
+      <div>
+      okay the things is that i really want this to work the okay
+      </div>
 
       <div id="results">
       </div>
