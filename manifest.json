@@ -1,0 +1,13 @@
+{
+  "name": "Language Extension",
+  "description": "Check quizlet or something to highlight requested words",
+  "version": "1.0",
+  "permissions": [
+    "activeTab"
+  ],
+  "browser_action": {
+    // "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+  "manifest_version": 2
+}
