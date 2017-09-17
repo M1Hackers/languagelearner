@@ -4,7 +4,7 @@ alert("fnfnfnf");
     buttonon.addEventListener("click",function(){
         
       chrome.tabs.executeScript(null,{file:"hilitor.js"},function(){
-        chrome.tabs.executeScript(null, {file: "test.js"},function());
+        chrome.tabs.executeScript(null, {file: "quizlet.js"});
       });   
     });
 });
