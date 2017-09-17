@@ -1,23 +1,45 @@
 const SEARCH_LIMIT = 10;
 const CLIENT_ID = "BpQKpyTJ6W";
+var idFinal = false;
 
 $(document).ready(function() {
+	$('#thou').click(function(){
+		setID = 1026577;
+		idFinal = true;
+		console.log("thousand", setID);
+	});
+	$('#oneh').click(function(){
+		setID = 207969;
+		idFinal = true;
+		console.log("one hundred", setID);
+	});
+	$('#fiveh').click(function(){
+		setID = 374483;
+		idFinal = true;
+		console.log("five hundred", setID);
+	});
     chrome.tabs.executeScript(null,{file : 'hilitor.js'});
     $('#submit_hilite').click(function() {
-        setID = $('#set_id').val();
-        if (setID == null || setID == "") {
-            setID = 1026577;
+        setURL = $('#set_id').val(); //now this is a URL
+        if (idFinal == false) {
+        	setID = setURL.substring(setURL.indexOf("com/") + 4);
+	        setIDarr = setID.split('/');
+	        setID = setIDarr[0];
+	        if (setURL == null || setURL == "") {
+	            setID = 1026577;
+	        }
         }
-        querySet(setID);
-    });
-    $('#submit_search').click(function() {
-        searchSets($("#search_terms").val(), SEARCH_LIMIT);
+	        
+        console.log(setID);
+        query(setID);
+        $('#submit_search').click(function() {
+            searchSets($("#search_terms").val(), SEARCH_LIMIT);
     });
 });
 
 function querySet(setID) {
     var queryURL = 'https://api.quizlet.com/2.0/sets/'+setID+'/terms?client_id='+CLIENT_ID;
-
+    // alert("doing something!")
     $.ajax({
         url: queryURL,
         success: function(data) { onSetReceived(data) }
