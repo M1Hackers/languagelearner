@@ -3,7 +3,9 @@ const CLIENT_ID = "BpQKpyTJ6W";
 var idFinal = false;
 
 $(document).ready(function() {
-	$('#thou').click(function(){
+    chrome.tabs.executeScript(null,{file : 'hilitor.js'});
+
+    $('#thou').click(function(){
 		setID = 1026577;
 		idFinal = true;
 		console.log("thousand", setID);
@@ -18,7 +20,7 @@ $(document).ready(function() {
 		idFinal = true;
 		console.log("five hundred", setID);
 	});
-    chrome.tabs.executeScript(null,{file : 'hilitor.js'});
+
     $('#submit_hilite').click(function() {
         setURL = $('#set_id').val(); //now this is a URL
         if (idFinal == false) {
@@ -32,8 +34,11 @@ $(document).ready(function() {
 	        
         console.log(setID);
         querySet(setID);
-        $('#submit_search').click(function() {
-            searchSets($("#search_terms").val(), SEARCH_LIMIT);
+
+
+    $('#submit_search').click(function() {
+        console.log("Searching:"+$("#search_terms").val());
+        searchSets($("#search_terms").val(), SEARCH_LIMIT);
     });
 });
 
