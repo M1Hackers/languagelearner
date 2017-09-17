@@ -1,10 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
-    
-    var buttonon = document.getElementById("button_press_on");
+alert("fnfnfnf");
+    var buttonon = document.getElementById("submit");
     buttonon.addEventListener("click",function(){
-
+        
       chrome.tabs.executeScript(null,{file:"hilitor.js"},function(){
-        chrome.tabs.executeScript(null, {file: "quizlet.js"},function());
+        chrome.tabs.executeScript(null, {file: "test.js"},function());
       });   
     });
 });
