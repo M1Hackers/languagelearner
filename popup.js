@@ -27,7 +27,7 @@ function onResultReceived(data)
 
     var wordList = extractWords(resultSet);
 
-    chrome.tabs.executeScript(null,{code: "(new Hilitor(document.body.innerText)).apply('"+wordList+"');"},function(){
+    chrome.tabs.executeScript(null,{code: '(new Hilitor(document.body.innerText)).apply("'+JSON.stringify(wordList).slice(1,-1)+'");'},function(){
     });
 }
 function extractWords(termSet) {
