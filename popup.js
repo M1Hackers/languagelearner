@@ -31,7 +31,7 @@ $(document).ready(function() {
         }
 	        
         console.log(setID);
-        query(setID);
+        querySet(setID);
         $('#submit_search').click(function() {
             searchSets($("#search_terms").val(), SEARCH_LIMIT);
     });
