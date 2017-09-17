@@ -6,14 +6,15 @@
 
     <body>
         <h2>SAT Language Learner</h2>
-        <p>Search for Quizlet sets or directly enter an ID (default: 1026577):</p>
+        <p>Search for Quizlet sets or directly enter a URL (default: 1000 SAT Words):</p>
         <div id="search_form">
             <input id="search_terms" type="text" placeholder="Keywords" />
             <button id="submit_search">Search</button>
         </div>
+
         <form id="search_results" action=""></form>
         <div id="id_form">
-            <input id="set_id" type="text" placeholder="Quizlet Set ID" />
+            <input id="set_id" type="text" placeholder="Quizlet Set URL" />
         </div>
         <div class="container">
             Or, select one from our curated collection:
@@ -21,6 +22,7 @@
             <button id="fiveh">500 SAT Words</button>
             <button id="oneh">100 SAT Words</button>
         </div>
-            <button id="submit_hilite">Highlight!</button>
+		
+		<button id="submit_hilite">Highlight!</button>
     </body>
 </html>
