@@ -23,10 +23,12 @@ $(document).ready(function() {
 
     $('#submit_hilite').click(function() {
         var setID;
-        if ($('input[name=wordSet]:checked', '#search_results') != null) {
+        if ($('input[name="wordSet"]:checked', '#search_results').length>0) {
             setID = $('input[name=wordSet]:checked', '#search_results').attr("data-set-id");
         } else if ($('#set_id').val() !=  null) {
-            setID = $('#set_id').val().substring(setURL.indexOf("com/") + 4);
+            var setURL = $('#set_id').val();
+            var com_index = setURL.indexOf("com/") + 4;
+            setID = $('#set_id').val().substring(com_index,setURL.indexOf("/",start=com_index+1));
         } else {
             setID = 1026577;
         }
