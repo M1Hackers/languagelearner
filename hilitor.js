@@ -18,7 +18,8 @@ function Hilitor(id, tag)
   var endCharRegex = new RegExp("^[^\\\w]+|[^\\\w]+$", "g");
 
   // characters used to break up the input string into words
-  var breakCharRegex = new RegExp("[^\\\w'-]+", "g");
+  // var breakCharRegex = new RegExp("[^\\\w'-]+", "g");
+  var breakCharRegex = new RegExp("[&]", "g");
 
   this.setMatchType = function(type)
   {
@@ -48,6 +49,7 @@ function Hilitor(id, tag)
   {
     input = input.replace(endCharRegex, "");
     input = input.replace(breakCharRegex, "|");
+    alert(input);
     input = input.replace(/^\||\|$/g, "");
     if(input) {
       var re = "(" + input + ")";
