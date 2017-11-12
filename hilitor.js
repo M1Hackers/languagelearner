@@ -49,7 +49,7 @@ function Hilitor(id, tag)
   {
     input = input.replace(endCharRegex, "");
     input = input.replace(breakCharRegex, "|");
-    alert(input);
+    //alert(input);
     input = input.replace(/^\||\|$/g, "");
     if(input) {
       var re = "(" + input + ")";
