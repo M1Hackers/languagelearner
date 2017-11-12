@@ -59,7 +59,6 @@ function querySet(setID) {
 function onSetReceived(resultSet)
 {
     var wordList = extractWords(resultSet);
-    alert(JSON.stringify(wordList).slice(1,-1));
     chrome.tabs.executeScript(null,{code: '(new Hilitor(document.body.innerText)).apply("'+JSON.stringify(wordList).slice(1,-1)+'");'},function(){
     });
 }
