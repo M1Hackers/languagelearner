@@ -7,18 +7,23 @@
             html {
                 height: 0px;
             }
+
             body {
                 text-align: center;
                 height: 0;
                 margin:5px;
                 width:200px;
             }
+
             button {
                 margin-top: 0.5em;
             }
+
+            #submit_hilite {
+                margin-bottom: 0.5em;
+            }
         </style>
     </head>
-
     <body>
         <h2 class="h2">SAT Language Learner</h2>
         <p>Search for Quizlet sets or directly enter a URL (default: 1000 SAT Words):</p>
@@ -31,9 +36,9 @@
 
         <form id="search_results" action="">
             <p>Our default collection:</p>
-            <input type="radio" name="wordSet" data-set-id="207969" /><span>100 SAT Words</span><br />
-            <input type="radio" name="wordSet" data-set-id="374483" /><span>500 SAT Words</span><br />
-            <input type="radio" name="wordSet" data-set-id="1026577" /><span>1000 SAT Words</span><br />
+            <input type="radio" name="wordSet" data-set-id="207969"/><span>100 SAT Words</span><br/>
+            <input type="radio" name="wordSet" data-set-id="374483"/><span>500 SAT Words</span><br/>
+            <input type="radio" name="wordSet" data-set-id="1026577"/><span>1000 SAT Words</span><br/>
         </form>
 
         <div id="id_form">
@@ -41,5 +46,6 @@
         </div>
 <!-- 		<button id="submit_hilite">Highlight!</button>
  -->        <button id="submit_hilite" class="btn btn-primary"> Highlight!</button
+
     </body>
 </html>
