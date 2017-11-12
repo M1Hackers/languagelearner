@@ -1,6 +1,8 @@
 # LanguageLearner
 
-To load into chrome extension, pull all files from repo, go to chrome->settings->extensions -> load unpacked extension and load directory that contains the files. Ensure you have all files, including:
+Now available on the Chrome Web Store! Simply search for Language Learner and add to your browser. Thanks!
+
+Files include:
 - manifest.json
 - jquery.min.js
 - popup.html
